@@ -136,8 +136,8 @@ lua <<EOF
 EOF
 set termguicolors
 colorscheme neon
-highlight Normal guibg=none
-highlight NvimTreeNormal guibg=none
+highlight Normal guibg=none "comment this line off if you do not use a photobackground or transparent background
+highlight NvimTreeNormal guibg=none "comment line this off if you do not use a photobackground or transparent background
 "colorscheme blue-moon
 
 "Keybinds
