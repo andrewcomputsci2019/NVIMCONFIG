@@ -143,6 +143,7 @@ highlight Normal guibg=none
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
 
 "sets
 set relativenumber
