@@ -136,7 +136,8 @@ lua <<EOF
 EOF
 set termguicolors
 colorscheme neon
-highlight Normal guibg=none 
+highlight Normal guibg=none
+highlight NvimTreeNormal guibg=none
 "colorscheme blue-moon
 
 "Keybinds
