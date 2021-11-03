@@ -150,11 +150,11 @@ set relativenumber
 set nu
 set hidden
 set nowrap 
-set tabstop=4 
-set softtabstop=4
+set tabstop=4 softtabstop=4
+set shiftwidth=4
 set smartindent
-set noswapfile
 set expandtab
+set noswapfile
 set incsearch
 set scrolloff=8
 set signcolumn=yes
