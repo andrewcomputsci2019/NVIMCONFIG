@@ -107,28 +107,6 @@ EOF
 "LSP Configs and Installer
 luafile ~/.config/nvim/completion.lua
 luafile ~/.config/nvim/lsp-installer-setup.lua
-"out of date check file above^
-lua << EOF
-		--require'lspconfig'.clangd.setup{}
-EOF
-lua << EOF
-		--require'lspconfig'.jdtls.setup{}
-EOF
-lua << EOF
---		require'lspconfig'.rust_analyzer.setup{}
-EOF
-lua << EOF
---		require'lspconfig'.gopls.setup{}						
-EOF
-lua << EOF
---		require'lspconfig'.bashls.setup{}
-EOF
-lua << EOF
---		require'lspconfig'.html.setup{}
-EOF
-lua << EOF
---		require'lspconfig'.pyright.setup{}
-EOF
 "color schemes
 lua <<EOF
 	vim.g.neon_style = "dark"
