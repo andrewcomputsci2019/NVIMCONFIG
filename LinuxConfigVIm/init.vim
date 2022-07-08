@@ -48,6 +48,7 @@ highlight NvimTreeNormal guibg=none "comment line this off if you do not use a p
 
 "Keybinds
 nnoremap <C-n> :NvimTreeToggle<CR>
+inoremap <C-s> <cmd>w<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
