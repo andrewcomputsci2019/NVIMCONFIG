@@ -1,13 +1,17 @@
 call plug#begin('~/.vim/plugged')
+"NVIM Tree and Fuzzy Finder
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+"Color Schemes
 Plug 'rafamadriz/neon'
 Plug 'kyazdani42/blue-moon'
+"LSP SETUP
+Plug 'williamboman/mason.nvim', { 'do': ':MasonUpdate' }
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/nvim-lsp-installer'
 "Autocomplte cmp
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -32,9 +36,15 @@ EOF
 lua <<EOF
 require'nvim-tree'.setup()
 EOF
+"Force GCC to be compiler tree sitter
+lua <<EOF
+require'nvim-treesitter.install'.compilers = { "gcc" }
+EOF
 "LSP Configs and Installer
+luafile ~/.config/nvim/mason-config.lua
 luafile ~/.config/nvim/completion.lua
-luafile ~/.config/nvim/lsp-installer-setup.lua
+luafile ~/.config/nvim/lspSetup.lua
+
 "color schemes
 lua <<EOF
 	vim.g.neon_style = "dark"
